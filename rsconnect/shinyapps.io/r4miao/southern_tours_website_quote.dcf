@@ -5,7 +5,7 @@ account: r4miao
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14666756
-bundleId: 10216349
+bundleId: 10216414
 url: https://r4miao.shinyapps.io/southern_tours_website_quote/
 version: 1
 asMultiple: FALSE
