@@ -55,8 +55,11 @@ server <- function(input, output, session) {
         HTML(paste0(
           "<p style='font-size:18px; color:blue; font-weight:bold;'>全家总费用: $", sprintf("%.2f", quote$family_total_price), "</p>",
           "<p style='font-size:18px; color:blue; font-weight:bold;'>人均费用: $", sprintf("%.2f", quote$family_person_price), "</p>",
-          "<p> * 此报价包含全程住宿，餐饮（不包括自费点餐项目，详情参见<a href='https://r4miao.github.io/southern_tour/itinerary.html'>行程安排</a>）），门票，活动，交通，常备医药，以及服务费用（司机，导游，翻译，及其他人工）。</p>"
-        ))
+          "<p> * 此报价包含全程住宿，门票，活动，美国落地后地面交通，常备医药，以及服务费用（司机，导游，翻译，及其他人工）。</p>",
+          "<p> * 此报价包含克莱姆森当地所有一日三餐，以及克莱姆森以外地区的早餐和午餐。</p>",
+          "<p> * 此报价<strong>不包含</strong>克莱姆森地区以外的晚餐。我们留给客户自己选择探索当地美食的自由。</p>",
+          "<p> * 此报价<strong>不包含</strong>机票，签证费用，及保险费用。游客需自己购买机票，申请签证，及购买保险。</p>",
+          "<p><strong>备注：</strong>此价格为基于四个家庭、共计16人的假设条件下进行的大致估算。实际费用将根据每次发团的最终家庭数量与总人数进行调整。由于我们坚持小团出行，家庭数与总人数的微小变动都可能对成本产生明显影响，敬请理解。</p>"))
       }
     })
     
