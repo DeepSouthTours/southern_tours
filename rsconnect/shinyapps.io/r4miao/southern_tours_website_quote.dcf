@@ -1,0 +1,12 @@
+name: southern_tours_website_quote
+title: southern_tours_website_quote
+username: r4miao
+account: r4miao
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14666756
+bundleId: 10215866
+url: https://r4miao.shinyapps.io/southern_tours_website_quote/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
