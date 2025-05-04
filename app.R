@@ -8,6 +8,14 @@ results <- readRDS("tour_cost_results.rds")
 
 # Define UI
 ui <- fluidPage(
+  # Umami tracking script
+  tags$head(
+    tags$script(
+      defer = NA,
+      src = "https://cloud.umami.is/script.js",
+      `data-website-id` = "96276152-d20b-464d-a966-3ac95d779f05"
+    )
+  ),
   titlePanel("深南行费用估算"),
   sidebarLayout(
     sidebarPanel(
