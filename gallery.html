@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="96276152-d20b-464d-a966-3ac95d779f05"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美东南风光图库</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Kaiti SC', 'KaiTi', '楷体', serif;
+    }
+
+    body {
+      line-height: 1.8;
+      padding: 20px;
+      background-color: #fff;
+      color: #1B4D3E;
+      padding-top: 100px;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 68px;
+      background-color: #1B4D3E;
+      color: #FFFFFF;
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 60px;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo-container {
+      display: flex;
+      align-items: center;
+      min-width: 120px;
+    }
+
+    header img {
+      height: 60px;
+      max-width: 100px;
+      margin-right: 8px;
+      object-fit: contain;
+      padding: 0px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      padding: 0 4px;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #FFFFFF;
+    }
+
+    header nav {
+      display: flex;
+      align-items: center;
+    }
+
+    header nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0 8px;
+    }
+
+    header nav ul.active {
+      display: flex;
+    }
+
+    header nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 4px 8px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #93c5fd;
+    }
+
+    header nav a.join-us {
+      background-color: #fb6904;
+      border-radius: 4px;
+      padding: 6px 12px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header nav a.join-us:hover {
+      background-color: #e55a00;
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav a.join-us::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #FFFFFF;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    header nav a.join-us:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Main content styling */
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2px;
+      color: #fb6904;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 4/3;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(27, 77, 62, 0.8);
+      color: white;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      header {
+        padding: 6px 12px;
+        min-height: 50px;
+        flex-wrap: wrap;
+      }
+
+      header .logo-container {
+        min-width: 100px;
+      }
+
+      header img {
+        height: 40px;
+        max-width: 80px;
+        margin-right: 6px;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+        padding: 0 2px;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      header nav {
+        width: 100%;
+        display: none;
+      }
+
+      header nav.active {
+        display: block;
+      }
+
+      header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 8px 0;
+        background-color: #1B4D3E;
+      }
+
+      header nav.active ul {
+        display: flex;
+      }
+
+      header nav a {
+        font-size: 1rem;
+        padding: 6px 12px;
+        display: block;
+      }
+
+      body {
+        padding-top: 120px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 30px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+      }
+
+      .gallery-item {
+        aspect-ratio: 3/2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Southern Tours Logo">
+      <h1>深南行</h1>
+    </div>
+    <span class="hamburger">☰</span>
+    <nav>
+      <ul>
+        <li><a href="aboutus.html">关于我们</a></li>
+        <li><a href="itinerary.html">在路上</a></li>
+        <li><a href="https://map.baidu.com/poi/%E5%85%8B%E8%8E%B1%E5%A7%86%E6%A3%AE/@-9221546.965000007,4096405.47,5.98z?uid=28a32a1c961641927369d3fd&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl" target="_blank">我们的方位</a></li>
+        <li><a href="gallery.html">风光图集</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('header nav').classList.toggle('active');
+    });
+  </script>
+
+  <h1>美东南风光图库</h1>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="images/clemson3.jpg" alt="Gallery Image 1">
+      <div class="gallery-caption">克莱姆森大学 </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/clemsonstadium.jpg" alt="Gallery Image 2">
+      <div class="gallery-caption">克莱姆森大学橄榄球场 </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/walkercourse1.jpg" alt="Gallery Image 3">
+      <div class="gallery-caption">克莱姆森大学Walker高尔夫球场</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/horse1.jpg" alt="Gallery Image 4">
+      <div class="gallery-caption">附近马场</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/newberrytown.webp" alt="Gallery Image 5">
+      <div class="gallery-caption">文化小镇街景 - Newberry </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/abbyville2.jpg" alt="Gallery Image 6">
+      <div class="gallery-caption">历史小镇街景 - Abbeville </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/Hiawassee_bellmountain.jpg" alt="Gallery Image 7">
+      <div class="gallery-caption">贝尔山巅俯瞰退休小镇 - Hiawassee </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/southern-landscape3.webp" alt="Gallery Image 8">
+      <div class="gallery-caption">大雾山中</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/great_smoky_mountain_road.jpg" alt="Gallery Image 9">
+      <div class="gallery-caption">大雾山中</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/modern_log_cabin1.jpg" alt="Gallery Image 10">
+      <div class="gallery-caption">山中木屋1</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/modern_log_cabin2.jpg" alt="Gallery Image 11">
+      <div class="gallery-caption">山中木屋2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery12.jpg" alt="Gallery Image 12">
+      <div class="gallery-caption">景点名称 12</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery13.jpg" alt="Gallery Image 13">
+      <div class="gallery-caption">景点名称 13</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery14.jpg" alt="Gallery Image 14">
+      <div class="gallery-caption">景点名称 14</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery15.jpg" alt="Gallery Image 15">
+      <div class="gallery-caption">景点名称 15</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery16.jpg" alt="Gallery Image 16">
+      <div class="gallery-caption">景点名称 16</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery17.jpg" alt="Gallery Image 17">
+      <div class="gallery-caption">景点名称 17</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery18.jpg" alt="Gallery Image 18">
+      <div class="gallery-caption">景点名称 18</div>
+    </div>
+  </div>
+</body>
+</html> 
