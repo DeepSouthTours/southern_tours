@@ -191,11 +191,11 @@
     </div>
     <span class="hamburger">☰</span>
     <nav>
-      <ul id="nav-menu">
-        <li><a href="#" class="tab-link active" data-tab="about" style="font-size: 1.1rem; padding: 4px 8px;">关于我们</a></li>
-        <li><a href="itinerary.html" data-tab="itinerary" style="font-size: 1.1rem; padding: 4px 8px;">在路上</a></li>
-        <li><a href="https://map.baidu.com/poi/%E5%85%8B%E8%8E%B1%E5%A7%86%E6%A3%AE/@-9221546.965000007,4096405.47,5.98z?uid=28a32a1c961641927369d3fd&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl" class="tab-link" data-tab="where-we-are" style="font-size: 1.1rem; padding: 4px 8px;">我们的方位</a></li>
-        <li><a href="gallery.html" style="font-size: 1.1rem; padding: 4px 8px;">风光图集</a></li>
+      <ul>
+        <li><a href="#" class="tab-link active" data-tab="about">关于我们</a></li>
+        <li><a href="itinerary.html" data-tab="itinerary">在路上</a></li>
+        <li><a href="https://map.baidu.com/poi/%E5%85%8B%E8%8E%B1%E5%A7%86%E6%A3%AE/@-9221546.965000007,4096405.47,5.98z?uid=28a32a1c961641927369d3fd&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl" class="tab-link" data-tab="where-we-are">我们的方位</a></li>
+        <li><a href="gallery.html">风光图集</a></li>
       </ul>
     </nav>
   </header>
@@ -265,10 +265,10 @@
         link.classList.add('active');
       });
     });
+
     // Hamburger menu toggle
     document.querySelector('.hamburger').addEventListener('click', () => {
-      document.querySelector('header nav ul#nav-menu').classList.toggle('active');
-      console.log('Hamburger clicked, nav-menu toggled');
+      document.querySelector('header nav').classList.toggle('active');
     });
   </script>
 </body>
