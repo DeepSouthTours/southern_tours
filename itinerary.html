@@ -209,6 +209,8 @@
         top: 100%;
         left: 0;
         background-color: #1B4D3E;
+        padding: 0;
+        margin: 0;
       }
 
       header nav.active {
@@ -230,8 +232,9 @@
 
       header nav a {
         font-size: 1rem;
-        padding: 6px 12px;
+        padding: 12px 16px;
         display: block;
+        text-align: center;
       }
 
       body {
@@ -302,6 +305,7 @@
   <!-- JavaScript for Hamburger Menu -->
   <script>
     document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('header nav').classList.toggle('active');
       document.querySelector('header nav ul').classList.toggle('active');
     });
   </script>
