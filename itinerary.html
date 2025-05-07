@@ -179,6 +179,7 @@
         padding: 6px 12px;
         min-height: 50px;
         flex-wrap: wrap;
+        position: relative;
       }
 
       header .logo-container {
@@ -198,11 +199,16 @@
 
       .hamburger {
         display: block;
+        z-index: 1001;
       }
 
       header nav {
         width: 100%;
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #1B4D3E;
       }
 
       header nav.active {
@@ -214,10 +220,8 @@
         flex-direction: column;
         width: 100%;
         padding: 8px 0;
+        margin: 0;
         background-color: #1B4D3E;
-        position: absolute;
-        top: 64px;
-        left: 0;
       }
 
       header nav.active ul {
